@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D6986212BDDB9B100DE0332 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986202BDDB9B100DE0332 /* user.swift */; };
+		1D6986232BDDB9BC00DE0332 /* opportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986222BDDB9BC00DE0332 /* opportunity.swift */; };
+		1D6986252BDDB9C900DE0332 /* org.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986242BDDB9C900DE0332 /* org.swift */; };
+		1D6986282BDDBB8700DE0332 /* data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986262BDDBB8700DE0332 /* data.xcdatamodeld */; };
 		1DAB18922BDDA2390001F544 /* pepe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB18912BDDA2390001F544 /* pepe.swift */; };
 		4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */; };
 		4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6572BDD90B30069DCD7 /* ContentView.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D6986202BDDB9B100DE0332 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		1D6986222BDDB9BC00DE0332 /* opportunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opportunity.swift; sourceTree = "<group>"; };
+		1D6986242BDDB9C900DE0332 /* org.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = org.swift; sourceTree = "<group>"; };
+		1D6986272BDDBB8700DE0332 /* data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = data.xcdatamodel; sourceTree = "<group>"; };
 		1DAB18912BDDA2390001F544 /* pepe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pepe.swift; sourceTree = "<group>"; };
 		4A62B6522BDD90B30069DCD7 /* hackdavisproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackdavisproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackdavisprojApp.swift; sourceTree = "<group>"; };
@@ -73,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D6986162BDDB67D00DE0332 /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				1D6986202BDDB9B100DE0332 /* user.swift */,
+				1D6986222BDDB9BC00DE0332 /* opportunity.swift */,
+				1D6986242BDDB9C900DE0332 /* org.swift */,
+				1D6986262BDDBB8700DE0332 /* data.xcdatamodeld */,
+			);
+			path = backend;
+			sourceTree = "<group>";
+		};
 		4A62B6492BDD90B30069DCD7 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +115,7 @@
 		4A62B6542BDD90B30069DCD7 /* hackdavisproj */ = {
 			isa = PBXGroup;
 			children = (
+				1D6986162BDDB67D00DE0332 /* backend */,
 				4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */,
 				4A62B6572BDD90B30069DCD7 /* ContentView.swift */,
 				4A62B6592BDD90B50069DCD7 /* Assets.xcassets */,
@@ -260,8 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6986282BDDBB8700DE0332 /* data.xcdatamodeld in Sources */,
+				1D6986232BDDB9BC00DE0332 /* opportunity.swift in Sources */,
 				4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */,
 				1DAB18922BDDA2390001F544 /* pepe.swift in Sources */,
+				1D6986212BDDB9B100DE0332 /* user.swift in Sources */,
+				1D6986252BDDB9C900DE0332 /* org.swift in Sources */,
 				4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +616,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1D6986262BDDBB8700DE0332 /* data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1D6986272BDDBB8700DE0332 /* data.xcdatamodel */,
+			);
+			currentVersion = 1D6986272BDDBB8700DE0332 /* data.xcdatamodel */;
+			name = data.xcdatamodeld;
+			path = /Users/n6thnguyen/Downloads/git/JEDavisHacks/JEHacks/hackdavisproj/backend/data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A62B64A2BDD90B30069DCD7 /* Project object */;
 }
