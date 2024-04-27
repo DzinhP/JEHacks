@@ -1,8 +1,8 @@
-//
-//  NotificationsView.swift
-//  hackdavisproj
-//
-//  Created by Dzinh Pham on 4/27/24.
-//
+import SwiftUI
 
-import Foundation
+struct NotificationsView: View {
+    var body: some View {
+        Text("Notifications")
+        // Show recent notifications
+    }
+}

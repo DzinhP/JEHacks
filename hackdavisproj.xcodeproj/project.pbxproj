@@ -14,6 +14,11 @@
 		4A62B6672BDD90B50069DCD7 /* hackdavisprojTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6662BDD90B50069DCD7 /* hackdavisprojTests.swift */; };
 		4A62B6712BDD90B50069DCD7 /* hackdavisprojUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6702BDD90B50069DCD7 /* hackdavisprojUITests.swift */; };
 		4A62B6732BDD90B50069DCD7 /* hackdavisprojUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6722BDD90B50069DCD7 /* hackdavisprojUITestsLaunchTests.swift */; };
+		F62C4BDB2BDDBCBF0007BD01 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BDA2BDDBCBF0007BD01 /* SearchView.swift */; };
+		F62C4BDD2BDDBCD20007BD01 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BDC2BDDBCD20007BD01 /* FilterView.swift */; };
+		F62C4BDF2BDDBCF80007BD01 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BDE2BDDBCF80007BD01 /* ProfileView.swift */; };
+		F62C4BE12BDDBD170007BD01 /* ListingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BE02BDDBD170007BD01 /* ListingsView.swift */; };
+		F62C4BE32BDDBD440007BD01 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BE22BDDBD440007BD01 /* NotificationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		4A62B66C2BDD90B50069DCD7 /* hackdavisprojUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackdavisprojUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A62B6702BDD90B50069DCD7 /* hackdavisprojUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackdavisprojUITests.swift; sourceTree = "<group>"; };
 		4A62B6722BDD90B50069DCD7 /* hackdavisprojUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackdavisprojUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F62C4BDA2BDDBCBF0007BD01 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F62C4BDC2BDDBCD20007BD01 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		F62C4BDE2BDDBCF80007BD01 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F62C4BE02BDDBD170007BD01 /* ListingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsView.swift; sourceTree = "<group>"; };
+		F62C4BE22BDDBD440007BD01 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 			children = (
 				4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */,
 				4A62B6572BDD90B30069DCD7 /* ContentView.swift */,
+				F62C4BD92BDDBCA50007BD01 /* NavBarContent */,
 				4A62B6592BDD90B50069DCD7 /* Assets.xcassets */,
 				4A62B65B2BDD90B50069DCD7 /* Preview Content */,
 			);
@@ -125,6 +136,18 @@
 				4A62B6722BDD90B50069DCD7 /* hackdavisprojUITestsLaunchTests.swift */,
 			);
 			path = hackdavisprojUITests;
+			sourceTree = "<group>";
+		};
+		F62C4BD92BDDBCA50007BD01 /* NavBarContent */ = {
+			isa = PBXGroup;
+			children = (
+				F62C4BDA2BDDBCBF0007BD01 /* SearchView.swift */,
+				F62C4BDC2BDDBCD20007BD01 /* FilterView.swift */,
+				F62C4BDE2BDDBCF80007BD01 /* ProfileView.swift */,
+				F62C4BE02BDDBD170007BD01 /* ListingsView.swift */,
+				F62C4BE22BDDBD440007BD01 /* NotificationsView.swift */,
+			);
+			path = NavBarContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62C4BDD2BDDBCD20007BD01 /* FilterView.swift in Sources */,
+				F62C4BE12BDDBD170007BD01 /* ListingsView.swift in Sources */,
 				4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */,
+				F62C4BDF2BDDBCF80007BD01 /* ProfileView.swift in Sources */,
+				F62C4BDB2BDDBCBF0007BD01 /* SearchView.swift in Sources */,
 				4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */,
+				F62C4BE32BDDBD440007BD01 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

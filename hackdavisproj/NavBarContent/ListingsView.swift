@@ -1,8 +1,8 @@
-//
-//  ListingsView.swift
-//  hackdavisproj
-//
-//  Created by Dzinh Pham on 4/27/24.
-//
+import SwiftUI
 
-import Foundation
+struct ListingsView: View {
+    var body: some View {
+        Text("Volunteer Opportunities Listings")
+        // Listing of all opportunities
+    }
+}

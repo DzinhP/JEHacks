@@ -1,8 +1,8 @@
-//
-//  ProfileView.swift
-//  hackdavisproj
-//
-//  Created by Dzinh Pham on 4/27/24.
-//
+import SwiftUI
 
-import Foundation
+struct ProfileView: View {
+    var body: some View {
+        Text("User Profile")
+        // Implement details about the user profile
+    }
+}
