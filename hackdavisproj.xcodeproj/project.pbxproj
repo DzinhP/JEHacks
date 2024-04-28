@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1D6986212BDDB9B100DE0332 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986202BDDB9B100DE0332 /* user.swift */; };
-		1D6986232BDDB9BC00DE0332 /* opportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986222BDDB9BC00DE0332 /* opportunity.swift */; };
 		1D6986252BDDB9C900DE0332 /* org.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986242BDDB9C900DE0332 /* org.swift */; };
 		1D6986282BDDBB8700DE0332 /* data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D6986262BDDBB8700DE0332 /* data.xcdatamodeld */; };
+		1D69862C2BDDC70C00DE0332 /* userService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69862B2BDDC70C00DE0332 /* userService.swift */; };
+		1D69862E2BDDC79200DE0332 /* orgService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69862D2BDDC79200DE0332 /* orgService.swift */; };
+		1D85A5C62BDDCE6A00C860EA /* oppo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85A5C52BDDCE6A00C860EA /* oppo.swift */; };
+		1D85A5C82BDDCE7800C860EA /* oppoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85A5C72BDDCE7800C860EA /* oppoService.swift */; };
 		1DAB18922BDDA2390001F544 /* pepe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB18912BDDA2390001F544 /* pepe.swift */; };
 		4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */; };
 		4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6572BDD90B30069DCD7 /* ContentView.swift */; };
@@ -40,9 +43,12 @@
 
 /* Begin PBXFileReference section */
 		1D6986202BDDB9B100DE0332 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
-		1D6986222BDDB9BC00DE0332 /* opportunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opportunity.swift; sourceTree = "<group>"; };
 		1D6986242BDDB9C900DE0332 /* org.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = org.swift; sourceTree = "<group>"; };
 		1D6986272BDDBB8700DE0332 /* data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = data.xcdatamodel; sourceTree = "<group>"; };
+		1D69862B2BDDC70C00DE0332 /* userService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userService.swift; sourceTree = "<group>"; };
+		1D69862D2BDDC79200DE0332 /* orgService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orgService.swift; sourceTree = "<group>"; };
+		1D85A5C52BDDCE6A00C860EA /* oppo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oppo.swift; sourceTree = "<group>"; };
+		1D85A5C72BDDCE7800C860EA /* oppoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oppoService.swift; sourceTree = "<group>"; };
 		1DAB18912BDDA2390001F544 /* pepe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pepe.swift; sourceTree = "<group>"; };
 		4A62B6522BDD90B30069DCD7 /* hackdavisproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackdavisproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackdavisprojApp.swift; sourceTree = "<group>"; };
@@ -85,9 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				1D6986202BDDB9B100DE0332 /* user.swift */,
-				1D6986222BDDB9BC00DE0332 /* opportunity.swift */,
 				1D6986242BDDB9C900DE0332 /* org.swift */,
+				1D85A5C52BDDCE6A00C860EA /* oppo.swift */,
 				1D6986262BDDBB8700DE0332 /* data.xcdatamodeld */,
+				1D69862B2BDDC70C00DE0332 /* userService.swift */,
+				1D69862D2BDDC79200DE0332 /* orgService.swift */,
+				1D85A5C72BDDCE7800C860EA /* oppoService.swift */,
 			);
 			path = backend;
 			sourceTree = "<group>";
@@ -280,12 +289,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D69862E2BDDC79200DE0332 /* orgService.swift in Sources */,
+				1D85A5C82BDDCE7800C860EA /* oppoService.swift in Sources */,
 				1D6986282BDDBB8700DE0332 /* data.xcdatamodeld in Sources */,
-				1D6986232BDDB9BC00DE0332 /* opportunity.swift in Sources */,
 				4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */,
 				1DAB18922BDDA2390001F544 /* pepe.swift in Sources */,
+				1D69862C2BDDC70C00DE0332 /* userService.swift in Sources */,
 				1D6986212BDDB9B100DE0332 /* user.swift in Sources */,
 				1D6986252BDDB9C900DE0332 /* org.swift in Sources */,
+				1D85A5C62BDDCE6A00C860EA /* oppo.swift in Sources */,
 				4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

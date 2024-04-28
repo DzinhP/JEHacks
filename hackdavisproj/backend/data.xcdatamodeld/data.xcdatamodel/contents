@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Entity" representedClassName="user" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="user">
-        <attribute name="availibility" optional="YES" attributeType="String"/>
-        <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="password" optional="YES" attributeType="String"/>
-        <attribute name="skill" optional="YES" attributeType="String"/>
-        <attribute name="skills" optional="YES" attributeType="String"/>
+    <entity name="Oppo" representedClassName="Oppo" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="opportunity">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="descript" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="requirements" optional="YES" attributeType="String"/>
+        <attribute name="titile" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Entity1" representedClassName="Entity1" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="org">
+    <entity name="Org" representedClassName="Org" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="org">
         <attribute name="contactInfo" optional="YES" attributeType="String"/>
         <attribute name="descript" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Entity2" representedClassName="Entity2" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="opportunity">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="descript" optional="YES" attributeType="String"/>
-        <attribute name="location" optional="YES" attributeType="String"/>
-        <attribute name="requirements" optional="YES" attributeType="String"/>
-        <attribute name="titile" optional="YES" attributeType="String"/>
+    <entity name="User" representedClassName="user" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="user">
+        <attribute name="availibility" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="skills" optional="YES" attributeType="Transformable"/>
     </entity>
 </model>

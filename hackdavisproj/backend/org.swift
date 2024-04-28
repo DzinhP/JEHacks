@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import CoreData
+
+
+@objc(Organization)
+public class Organization: NSManagedObject {
+    @NSManaged public var name: String
+    @NSManaged public var location: String
+    @NSManaged public var contactInfo: String
+    @NSManaged public var descriptionText: String // 'description' is a reserved word in NSObject
+}
