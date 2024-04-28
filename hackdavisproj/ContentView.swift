@@ -1,24 +1,33 @@
-//
-//  ContentView.swift
-//  hackdavisproj
-//
-//  Created by Aidan Nguyen on 4/27/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            SearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.fill")
+                }
+            
+            ListingsView()
+                .tabItem {
+                    Label("Listings", systemImage: "list.bullet")
+                }
+            
+            NotificationsView()
+                .tabItem {
+                    Label("Notifications", systemImage: "bell.fill")
+                }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
