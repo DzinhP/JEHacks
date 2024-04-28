@@ -9,6 +9,17 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
             VStack {
+                HStack {
+                                    Spacer() // This spacer will push everything after it to the right
+                                    Image("logo") // Your logo here
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 150, height: 150) // Adjust the size as necessary
+                                        .padding(.top,-80)
+                                        .padding(.bottom, -30)
+                                }
+                                .padding(.horizontal,15) // Add horizontal padding if needed
+                
                 TextField("Search by keywords, location...", text: $searchText)
                     .padding()
                     .background(Color(.systemGray6))
@@ -18,6 +29,7 @@ struct SearchView: View {
                 Button("Filter Options") {
                     showFilters.toggle()
                 }
+                .foregroundColor(.color3)
                 .sheet(isPresented: $showFilters) {
                     FilterView()  // Assuming FilterView exists and works independently
                 }
@@ -27,16 +39,18 @@ struct SearchView: View {
                 }
                 .padding()
                 .foregroundColor(.white)
-                .background(Color.blue)
+                .background(.color3)
                 .cornerRadius(8)
+                
+
 
                 List {
                     ForEach(eventData.events.filter { searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText) || $0.description.localizedCaseInsensitiveContains(searchText) }) { event in
                         DisclosureGroup {
                             VStack(alignment: .leading) {
-                                Text("Description: \(event.description)")
+                                (Text("Description: ").bold() + Text(event.description))
                                     .padding()
-                                Text("Date: \(event.date, style: .date)")
+                                (Text("Date: ").bold() + Text(event.date, style: .date))
                                     .padding()
                             }
                         } label: {
@@ -46,7 +60,9 @@ struct SearchView: View {
                         }
                     }
                 }
+                
                 .navigationTitle("Volunteering")
+                .foregroundColor(.black)
             }
             .sheet(isPresented: $showingAddEventView) {
                 AddEventView(eventData: eventData)

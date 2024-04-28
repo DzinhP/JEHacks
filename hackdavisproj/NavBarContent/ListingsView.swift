@@ -1,25 +1,40 @@
 import SwiftUI
 
 struct ListingsView: View {
-    @ObservedObject var eventData: EventData  // Observing the shared data model
-
+    @ObservedObject var eventData: EventData
+    
     var body: some View {
         List {
             ForEach(eventData.events) { event in
-                DisclosureGroup {
-                    VStack(alignment: .leading) {
-                        Text("Description: \(event.description)")
-                            .padding()
-                        Text("Date: \(event.date, style: .date)")
+                VStack(alignment: .leading) {
+                    DisclosureGroup {
+                        VStack(alignment: .leading) {
+                            (Text("Description: ").bold() + Text(event.description))
+                                .padding()
+                            (Text("Date: ").bold() + Text(event.date, style: .date))
+                                .padding()
+                        }
+                    } label: {
+                        Text(event.title)
+                            .font(.headline)
                             .padding()
                     }
-                } label: {
-                    Text(event.title)
-                        .font(.headline)
+                    
+                    if !eventData.isSignedUp(for: event) {
+                        Button("Sign Up") {
+                            eventData.signUp(for: event)
+                        }
                         .padding()
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .background(.color3)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        .padding(.horizontal)
+                    }
                 }
             }
+            .navigationTitle("Volunteer Opportunities Listings")
         }
-        .navigationTitle("Volunteer Opportunities Listings")
     }
 }
+

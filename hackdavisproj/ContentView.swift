@@ -5,35 +5,31 @@ struct ContentView: View {
     @AppStorage("isUserLoggedIn") var isUserLoggedIn: Bool = false  // Persisted user login state
 
     var body: some View {
-        if isUserLoggedIn {
-            TabView {
-                SearchView(eventData: eventData)
-                    .tabItem {
-                        Label("Search", systemImage: "magnifyingglass")
-                    }
-                
-                ProfileView(isUserLoggedIn: $isUserLoggedIn)
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }
-                
-                ListingsView(eventData: eventData)
-                    .tabItem {
-                        Label("Listings", systemImage: "list.bullet")
-                    }
-                
-          
+        Group {
+            if isUserLoggedIn {
+                TabView {
+                    SearchView(eventData: eventData)
+                        .tabItem {
+                            Label("Search", systemImage: "magnifyingglass")
+                        }
+                    
+                    ProfileView(isUserLoggedIn: $isUserLoggedIn, eventData:eventData)
+                        .tabItem {
+                            Label("Profile", systemImage: "person.fill")
+                        }
+                    
+                    ListingsView(eventData: eventData)
+                        .tabItem {
+                            Label("Listings", systemImage: "list.bullet")
+                        }
+                }
+                .transition(.move(edge: .trailing))  // Transition for the main content
+            } else {
+                LoginView(isUserLoggedIn: $isUserLoggedIn)
+                    .transition(.move(edge: .leading))  // Transition for the login view
             }
-        } else {
-            LoginView(isUserLoggedIn: $isUserLoggedIn)
         }
-    }
-
-    func logout() {
-        // Any cleanup actions can be performed here
-        isUserLoggedIn = false
-        // Reset event data or clear any sensitive information if necessary
-        eventData.events.removeAll()
+        .animation(.easeInOut(duration: 0.5), value: isUserLoggedIn)  // Animation for switching states
     }
 }
 
