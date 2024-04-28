@@ -1,4 +1,5 @@
 
+
 import SwiftUI
 
 
@@ -15,11 +16,20 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Image(systemName: "person.crop.circle")
+                Text("VolunteerHub")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 50)
+                    .bold()
+                
+                Image("logo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100, height: 100)
-                    .padding(.top, 50)
+                    .frame(width: 350, height: 350)
+                    .padding(.top, -50)
+                    .padding(.bottom, -100)
                 
                 TextField("Username", text: $username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -34,23 +44,31 @@ struct LoginView: View {
                         .padding()
                 }
                 
+                if !errorMessage.isEmpty {
+                                   Text(errorMessage)
+                                       .foregroundColor(errorMessage == "Incorrect username or password" ? .red : .yellow)
+                                       .padding()
+                               }
+                
                 Button(action: isSignUp ? performSignUp : performLogin) {
                     Text(isSignUp ? "Sign Up" : "Log In")
                         .foregroundColor(.white)
                         .frame(width: 200, height: 50)
-                        .background(Color.blue)
+                        .background(.color1)
                         .cornerRadius(8)
                 }
                 .padding()
                 
                 Button(isSignUp ? "Already have an account? Log In" : "Need an account? Sign Up") {
                     isSignUp.toggle()
+                    errorMessage = "" // Clear error message when switching modes
                 }
+                .foregroundColor(.white)
                 .padding()
                 
                 Spacer()
             }
-            .navigationBarTitle(isSignUp ? "Sign Up" : "Login", displayMode: .inline)
+            .background(.color3) // Replace with your color
         }
     }
 
@@ -60,6 +78,7 @@ struct LoginView: View {
             errorMessage = "Incorrect username or password."
             return
         }
+        errorMessage = ""
         isUserLoggedIn = true
     }
 
@@ -71,13 +90,15 @@ struct LoginView: View {
         }
         
         if userService.createUser(name: username, password: password) != nil {
-            print("User created successfully.")
+            errorMessage = ""
             isUserLoggedIn = true
         } else {
-            errorMessage = "Failed to create user. Username may already exist."
+            errorMessage = "Invalid. Username may already exist."
         }
+        
     }
 }
+    
 
 
 struct LoginView_Previews: PreviewProvider {
