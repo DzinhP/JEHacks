@@ -5,27 +5,27 @@ struct SearchView: View {
     @State private var searchText = ""
     @State private var showFilters = false
     @State private var showingAddEventView = false
-
+    
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
-                                    Spacer() // This spacer will push everything after it to the right
-                                    Image("logo") // Your logo here
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 150, height: 150) // Adjust the size as necessary
-                                        .padding(.top,-80)
-                                        .padding(.bottom, -30)
-                                }
-                                .padding(.horizontal,15) // Add horizontal padding if needed
+                    Spacer() // This spacer will push everything after it to the right
+                    Image("logo") // Your logo here
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150) // Adjust the size as necessary
+                        .padding(.top,-80)
+                        .padding(.bottom, -30)
+                }
+                .padding(.horizontal,15) // Add horizontal padding if needed
                 
                 TextField("Search by keywords, location...", text: $searchText)
                     .padding()
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
                     .padding()
-
+                
                 Button("Filter Options") {
                     showFilters.toggle()
                 }
@@ -33,7 +33,7 @@ struct SearchView: View {
                 .sheet(isPresented: $showFilters) {
                     FilterView()  // Assuming FilterView exists and works independently
                 }
-
+                
                 Button("Add Volunteer Opportunity") {
                     showingAddEventView = true
                 }
@@ -42,8 +42,8 @@ struct SearchView: View {
                 .background(.color3)
                 .cornerRadius(8)
                 
-
-
+                
+                
                 List {
                     ForEach(eventData.events.filter { searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText) || $0.description.localizedCaseInsensitiveContains(searchText) }) { event in
                         DisclosureGroup {
@@ -64,6 +64,21 @@ struct SearchView: View {
                             Text(event.title)
                                 .font(.headline)
                                 .padding()
+                        }
+                        HStack {
+                            Button(action: {
+                                if let index = eventData.events.firstIndex(where: { $0.id == event.id }) {
+                                    let isAlreadyLiked = eventData.events[index].isLiked
+                                    eventData.events[index].isLiked.toggle()
+                                    eventData.events[index].likesCount += isAlreadyLiked ? -1 : 1
+                                }
+                            }) {
+                                Image(systemName: event.isLiked ? "heart.fill" : "heart")
+                                    .foregroundColor(event.isLiked ? .red : .gray)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            Text("\(event.likesCount)")
+                                .foregroundColor(.gray)
                         }
                     }
                 }

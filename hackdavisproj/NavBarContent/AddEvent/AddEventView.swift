@@ -27,13 +27,14 @@ struct AddEventView: View {
                 Button("Select Image") {
                     showingImagePicker = true
                 }
-
+                .foregroundColor(.color3).bold()
                 Button("Save Event") {
                     var newEvent = VolunteerEvent(title: title, description: description, date: date)
                     newEvent.image = image
                     eventData.events.append(newEvent)
                     presentationMode.wrappedValue.dismiss()  // Dismiss the view after saving
                 }
+                .foregroundColor(.color3).bold()
             }
             .navigationTitle("Add Event")
             .sheet(isPresented: $showingImagePicker) {

@@ -7,7 +7,8 @@ struct VolunteerEvent: Identifiable {
     var description: String
     var date: Date
     var imageData: Data?
-    
+    var isLiked: Bool = false
+    var likesCount: Int = 0 
     var image: UIImage? {
             get {
                 guard let imageData = imageData else { return nil }
