@@ -24,8 +24,6 @@ class OrgService {
         newOrganization.location = location
         newOrganization.contactInfo = contactInfo
         newOrganization.descriptionText = descriptionText
-        
-        
         do {
             try context.save()
             print("Organization saved successfully!")
