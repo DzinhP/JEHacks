@@ -28,7 +28,9 @@
 		F62C4BDD2BDDBCD20007BD01 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BDC2BDDBCD20007BD01 /* FilterView.swift */; };
 		F62C4BDF2BDDBCF80007BD01 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BDE2BDDBCF80007BD01 /* ProfileView.swift */; };
 		F62C4BE12BDDBD170007BD01 /* ListingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BE02BDDBD170007BD01 /* ListingsView.swift */; };
-		F62C4BE32BDDBD440007BD01 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BE22BDDBD440007BD01 /* NotificationsView.swift */; };
+		F62C4BE62BDDC8DC0007BD01 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BE52BDDC8DC0007BD01 /* AddEventView.swift */; };
+		F62C4BE82BDDD5300007BD01 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BE72BDDD5300007BD01 /* EventModel.swift */; };
+		F62C4BEA2BDDE1C90007BD01 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62C4BE92BDDE1C90007BD01 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,9 @@
 		F62C4BDC2BDDBCD20007BD01 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		F62C4BDE2BDDBCF80007BD01 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F62C4BE02BDDBD170007BD01 /* ListingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsView.swift; sourceTree = "<group>"; };
-		F62C4BE22BDDBD440007BD01 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		F62C4BE52BDDC8DC0007BD01 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		F62C4BE72BDDD5300007BD01 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		F62C4BE92BDDE1C90007BD01 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 				1D6986162BDDB67D00DE0332 /* backend */,
 				4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */,
 				4A62B6572BDD90B30069DCD7 /* ContentView.swift */,
+				F62C4BE92BDDE1C90007BD01 /* LoginView.swift */,
 				F62C4BD92BDDBCA50007BD01 /* NavBarContent */,
 				4A62B6592BDD90B50069DCD7 /* Assets.xcassets */,
 				4A62B65B2BDD90B50069DCD7 /* Preview Content */,
@@ -203,13 +208,22 @@
 		F62C4BD92BDDBCA50007BD01 /* NavBarContent */ = {
 			isa = PBXGroup;
 			children = (
+				F62C4BE72BDDD5300007BD01 /* EventModel.swift */,
 				F62C4BDA2BDDBCBF0007BD01 /* SearchView.swift */,
+				F62C4BE42BDDC8C30007BD01 /* AddEvent */,
 				F62C4BDC2BDDBCD20007BD01 /* FilterView.swift */,
 				F62C4BDE2BDDBCF80007BD01 /* ProfileView.swift */,
 				F62C4BE02BDDBD170007BD01 /* ListingsView.swift */,
-				F62C4BE22BDDBD440007BD01 /* NotificationsView.swift */,
 			);
 			path = NavBarContent;
+			sourceTree = "<group>";
+		};
+		F62C4BE42BDDC8C30007BD01 /* AddEvent */ = {
+			isa = PBXGroup;
+			children = (
+				F62C4BE52BDDC8DC0007BD01 /* AddEventView.swift */,
+			);
+			path = AddEvent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,13 +409,15 @@
 				1D85A5C62BDDCE6A00C860EA /* oppo.swift in Sources */,
 =======
 				F62C4BDD2BDDBCD20007BD01 /* FilterView.swift in Sources */,
+				F62C4BE82BDDD5300007BD01 /* EventModel.swift in Sources */,
 				F62C4BE12BDDBD170007BD01 /* ListingsView.swift in Sources */,
+				F62C4BEA2BDDE1C90007BD01 /* LoginView.swift in Sources */,
 				4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */,
+				F62C4BE62BDDC8DC0007BD01 /* AddEventView.swift in Sources */,
 				F62C4BDF2BDDBCF80007BD01 /* ProfileView.swift in Sources */,
 				F62C4BDB2BDDBCBF0007BD01 /* SearchView.swift in Sources */,
 >>>>>>> main
 				4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */,
-				F62C4BE32BDDBD440007BD01 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
