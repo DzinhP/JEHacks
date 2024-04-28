@@ -16,7 +16,6 @@ class OrgService {
     init(context: NSManagedObjectContext) {
         self.context = context
     }
-    
     // Create
     func createOrganization(name: String, location: String, contactInfo: String, descriptionText: String) {
         let newOrganization = Organization(context: context)
