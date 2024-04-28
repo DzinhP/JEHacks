@@ -16,7 +16,7 @@ struct ProfileView: View {
                     Image(systemName: "person.crop.circle.fill")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 120, height: 120)
+                        .frame(width: 60, height: 60)
                         .padding(.top, 20)
                         .foregroundColor(.white)  // Adjust color as needed
                         .shadow(radius: 10)
@@ -29,14 +29,14 @@ struct ProfileView: View {
                     
                 }
             }
-            .frame(height: 300)
+            .frame(height: 160)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .shadow(radius: 10)
             .padding()
 
             // Display signed up events
             List {
-                Section(header: Text("Signed Up Events").bold().foregroundColor(.black)){
+                Section(header: Text("Signed Up Events").bold().foregroundColor(.black).font(.title3)){
                     ForEach(eventData.signedUpEvents) { event in
                         VStack(alignment: .leading) {
                             Text(event.title).font(.headline)
@@ -49,7 +49,7 @@ struct ProfileView: View {
             Spacer()
 
             // Settings and logout section
-            VStack {
+            HStack {
                 Button("Settings") {
                     // settings action
                 }
@@ -62,6 +62,12 @@ struct ProfileView: View {
                 .buttonStyle(PrimaryButtonStyle())
             }
             .padding()
+            Text("Email VolunteerHub@gmail.com for Feedback and Reviews")
+                .bold()  // Make the text bold
+                .foregroundColor(.color1)  // Set the text color to blue
+                .multilineTextAlignment(.center)  // Center-align the text
+                .padding()  // Add padding around the text for better spacing in the UI
+
         }
         .background(LinearGradient(gradient: Gradient(colors: [.color5]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
     }
