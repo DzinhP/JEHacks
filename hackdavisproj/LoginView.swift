@@ -11,8 +11,8 @@ struct LoginView: View {
     @State private var isSignUp = false
     @State private var errorMessage = ""
     var userService: UserService
-
-
+    
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -45,10 +45,10 @@ struct LoginView: View {
                 }
                 
                 if !errorMessage.isEmpty {
-                                   Text(errorMessage)
-                                       .foregroundColor(errorMessage == "Incorrect username or password" ? .red : .yellow)
-                                       .padding()
-                               }
+                    Text(errorMessage)
+                        .foregroundColor(errorMessage == "Incorrect username or password" ? .red : .yellow)
+                        .padding()
+                }
                 
                 Button(action: isSignUp ? performSignUp : performLogin) {
                     Text(isSignUp ? "Sign Up" : "Log In")
@@ -71,18 +71,18 @@ struct LoginView: View {
             .background(.color3) // Replace with your color
         }
     }
-
-
+    
+    
     private func performLogin() {
         guard let user = userService.fetchUser(withName: username), user.password == userService.hashPassword(password) else {
             errorMessage = "Incorrect username or password."
             return
         }
         errorMessage = ""
+        UserDefaults.standard.set(username, forKey: "lastLoggedInUser")
         isUserLoggedIn = true
     }
-
-
+    
     private func performSignUp() {
         guard isSignUp, password == confirmPassword, !username.isEmpty, !password.isEmpty else {
             errorMessage = "Please fill in all fields correctly."
@@ -91,11 +91,11 @@ struct LoginView: View {
         
         if userService.createUser(name: username, password: password) != nil {
             errorMessage = ""
+            UserDefaults.standard.set(username, forKey: "lastLoggedInUser")
             isUserLoggedIn = true
         } else {
             errorMessage = "Invalid. Username may already exist."
         }
-        
     }
 }
     

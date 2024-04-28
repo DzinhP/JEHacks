@@ -3,6 +3,7 @@ import SwiftUI
 struct ProfileView: View {
     @Binding var isUserLoggedIn: Bool
     @ObservedObject var eventData: EventData  // Add this line
+    var username: String = UserDefaults.standard.string(forKey: "lastLoggedInUser") ?? "Guest"
 
     var body: some View {
         VStack {
@@ -20,16 +21,12 @@ struct ProfileView: View {
                         .foregroundColor(.white)  // Adjust color as needed
                         .shadow(radius: 10)
                     
-                    Text("Username")
+                    Text("Welcome, \(username)!")
                         .font(.largeTitle)
                         .foregroundColor(.white)  // Adjust color as needed
                         .shadow(radius: 5)
                         .padding([.top, .bottom], 5)
                     
-                    Text("Bio goes here")
-                        .font(.callout)
-                        .foregroundColor(.white)  // Adjust color as needed
-                        .padding(.bottom, 20)
                 }
             }
             .frame(height: 300)
@@ -59,6 +56,7 @@ struct ProfileView: View {
                 .buttonStyle(PrimaryButtonStyle())
 
                 Button("Log Out") {
+                    UserDefaults.standard.removeObject(forKey: "lastLoggedInUser")
                     isUserLoggedIn = false
                 }
                 .buttonStyle(PrimaryButtonStyle())
