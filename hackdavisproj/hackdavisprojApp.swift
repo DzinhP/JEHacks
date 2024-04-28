@@ -1,17 +1,17 @@
-//
-//  hackdavisprojApp.swift
-//  hackdavisproj
-//
-//  Created by Aidan Nguyen on 4/27/24.
-//
+
 
 import SwiftUI
 
+
 @main
 struct hackdavisprojApp: App {
+    let persistenceController = PersistenceController.shared
+
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, persistenceController.viewContext)
         }
     }
 }

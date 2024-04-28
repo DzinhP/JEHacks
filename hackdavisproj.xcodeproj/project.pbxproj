@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB891862BDE380600209CE2 /* data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DB891842BDE380600209CE2 /* data.xcdatamodeld */; };
+		1DB891882BDE396800209CE2 /* userService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB891872BDE396800209CE2 /* userService.swift */; };
+		1DB8918A2BDE3A3B00209CE2 /* oppoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB891892BDE3A3B00209CE2 /* oppoService.swift */; };
+		1DB8918C2BDE3BA800209CE2 /* orgService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8918B2BDE3BA800209CE2 /* orgService.swift */; };
+		1DB8918E2BDE3CF600209CE2 /* persistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8918D2BDE3CF600209CE2 /* persistenceController.swift */; };
 		4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */; };
 		4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6572BDD90B30069DCD7 /* ContentView.swift */; };
 		4A62B65A2BDD90B50069DCD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A62B6592BDD90B50069DCD7 /* Assets.xcassets */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DB891852BDE380600209CE2 /* data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = data.xcdatamodel; sourceTree = "<group>"; };
+		1DB891872BDE396800209CE2 /* userService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userService.swift; sourceTree = "<group>"; };
+		1DB891892BDE3A3B00209CE2 /* oppoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oppoService.swift; sourceTree = "<group>"; };
+		1DB8918B2BDE3BA800209CE2 /* orgService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orgService.swift; sourceTree = "<group>"; };
+		1DB8918D2BDE3CF600209CE2 /* persistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistenceController.swift; sourceTree = "<group>"; };
 		4A62B6522BDD90B30069DCD7 /* hackdavisproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackdavisproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackdavisprojApp.swift; sourceTree = "<group>"; };
 		4A62B6572BDD90B30069DCD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DB891832BDE37F700209CE2 /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				1DB891842BDE380600209CE2 /* data.xcdatamodeld */,
+				1DB891872BDE396800209CE2 /* userService.swift */,
+				1DB891892BDE3A3B00209CE2 /* oppoService.swift */,
+				1DB8918B2BDE3BA800209CE2 /* orgService.swift */,
+			);
+			path = backend;
+			sourceTree = "<group>";
+		};
 		4A62B6492BDD90B30069DCD7 = {
 			isa = PBXGroup;
 			children = (
@@ -108,12 +129,14 @@
 		4A62B6542BDD90B30069DCD7 /* hackdavisproj */ = {
 			isa = PBXGroup;
 			children = (
+				1DB891832BDE37F700209CE2 /* backend */,
 				4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */,
 				4A62B6572BDD90B30069DCD7 /* ContentView.swift */,
 				F62C4BE92BDDE1C90007BD01 /* LoginView.swift */,
 				F62C4BD92BDDBCA50007BD01 /* NavBarContent */,
 				4A62B6592BDD90B50069DCD7 /* Assets.xcassets */,
 				4A62B65B2BDD90B50069DCD7 /* Preview Content */,
+				1DB8918D2BDE3CF600209CE2 /* persistenceController.swift */,
 			);
 			path = hackdavisproj;
 			sourceTree = "<group>";
@@ -299,10 +322,15 @@
 				F62C4BE12BDDBD170007BD01 /* ListingsView.swift in Sources */,
 				F62C4BEA2BDDE1C90007BD01 /* LoginView.swift in Sources */,
 				4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */,
+				1DB8918C2BDE3BA800209CE2 /* orgService.swift in Sources */,
+				1DB891882BDE396800209CE2 /* userService.swift in Sources */,
 				F62C4BE62BDDC8DC0007BD01 /* AddEventView.swift in Sources */,
 				F62C4BDF2BDDBCF80007BD01 /* ProfileView.swift in Sources */,
+				1DB891862BDE380600209CE2 /* data.xcdatamodeld in Sources */,
 				F62C4BDB2BDDBCBF0007BD01 /* SearchView.swift in Sources */,
 				4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */,
+				1DB8918A2BDE3A3B00209CE2 /* oppoService.swift in Sources */,
+				1DB8918E2BDE3CF600209CE2 /* persistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +660,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DB891842BDE380600209CE2 /* data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DB891852BDE380600209CE2 /* data.xcdatamodel */,
+			);
+			currentVersion = 1DB891852BDE380600209CE2 /* data.xcdatamodel */;
+			name = data.xcdatamodeld;
+			path = /Users/n6thnguyen/Downloads/git/vhub/JEHacks/hackdavisproj/backend/data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A62B64A2BDD90B30069DCD7 /* Project object */;
 }
