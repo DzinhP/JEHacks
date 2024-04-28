@@ -9,6 +9,13 @@ struct ListingsView: View {
                 VStack(alignment: .leading) {
                     DisclosureGroup {
                         VStack(alignment: .leading) {
+                            if let image = event.image {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 200)
+                                    .cornerRadius(10)
+                            }
                             (Text("Description: ").bold() + Text(event.description))
                                 .padding()
                             (Text("Date: ").bold() + Text(event.date, style: .date))

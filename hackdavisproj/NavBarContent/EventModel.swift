@@ -1,11 +1,23 @@
 import Foundation
+import UIKit
 
 struct VolunteerEvent: Identifiable {
     let id = UUID()
     var title: String
     var description: String
     var date: Date
-}
+    var imageData: Data?
+    
+    var image: UIImage? {
+            get {
+                guard let imageData = imageData else { return nil }
+                return UIImage(data: imageData)
+            }
+            set {
+                imageData = newValue?.jpegData(compressionQuality: 1.0)
+            }
+        }
+    }
 
 class EventData: ObservableObject {
     @Published var events: [VolunteerEvent] = []

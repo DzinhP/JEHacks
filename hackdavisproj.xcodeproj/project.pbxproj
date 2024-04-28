@@ -12,6 +12,7 @@
 		1DB8918A2BDE3A3B00209CE2 /* oppoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB891892BDE3A3B00209CE2 /* oppoService.swift */; };
 		1DB8918C2BDE3BA800209CE2 /* orgService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8918B2BDE3BA800209CE2 /* orgService.swift */; };
 		1DB8918E2BDE3CF600209CE2 /* persistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8918D2BDE3CF600209CE2 /* persistenceController.swift */; };
+		1DB891902BDE64E400209CE2 /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8918F2BDE64E400209CE2 /* UIImagePickerController.swift */; };
 		4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */; };
 		4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6572BDD90B30069DCD7 /* ContentView.swift */; };
 		4A62B65A2BDD90B50069DCD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A62B6592BDD90B50069DCD7 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		1DB891892BDE3A3B00209CE2 /* oppoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oppoService.swift; sourceTree = "<group>"; };
 		1DB8918B2BDE3BA800209CE2 /* orgService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orgService.swift; sourceTree = "<group>"; };
 		1DB8918D2BDE3CF600209CE2 /* persistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistenceController.swift; sourceTree = "<group>"; };
+		1DB8918F2BDE64E400209CE2 /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
 		4A62B6522BDD90B30069DCD7 /* hackdavisproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackdavisproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackdavisprojApp.swift; sourceTree = "<group>"; };
 		4A62B6572BDD90B30069DCD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				4A62B6592BDD90B50069DCD7 /* Assets.xcassets */,
 				4A62B65B2BDD90B50069DCD7 /* Preview Content */,
 				1DB8918D2BDE3CF600209CE2 /* persistenceController.swift */,
+				1DB8918F2BDE64E400209CE2 /* UIImagePickerController.swift */,
 			);
 			path = hackdavisproj;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */,
 				1DB8918A2BDE3A3B00209CE2 /* oppoService.swift in Sources */,
 				1DB8918E2BDE3CF600209CE2 /* persistenceController.swift in Sources */,
+				1DB891902BDE64E400209CE2 /* UIImagePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +501,7 @@
 				DEVELOPMENT_TEAM = 2ZG2FGZ45L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = VolunteerHub;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -526,6 +531,7 @@
 				DEVELOPMENT_TEAM = 2ZG2FGZ45L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = VolunteerHub;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

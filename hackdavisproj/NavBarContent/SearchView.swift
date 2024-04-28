@@ -48,6 +48,13 @@ struct SearchView: View {
                     ForEach(eventData.events.filter { searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText) || $0.description.localizedCaseInsensitiveContains(searchText) }) { event in
                         DisclosureGroup {
                             VStack(alignment: .leading) {
+                                if let image = event.image {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 200)
+                                        .cornerRadius(10)
+                                }
                                 (Text("Description: ").bold() + Text(event.description))
                                     .padding()
                                 (Text("Date: ").bold() + Text(event.date, style: .date))
@@ -60,6 +67,7 @@ struct SearchView: View {
                         }
                     }
                 }
+                
                 
                 .navigationTitle("Volunteering")
                 .foregroundColor(.black)
