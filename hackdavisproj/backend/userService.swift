@@ -17,34 +17,39 @@ class UserService {
     }
 
     // Create a new user
-    func createUser(name: String, email: String, password: String, skills: [String]) {
+    func createUser(name: String, email: String, password: String, skills: [String]) -> User? {
         let newUser = User(context: context)
         newUser.name = name
         newUser.email = email
-        newUser.password = password // Consider hashing this value before storage for security
+        newUser.password = password
         newUser.skills = skills
+
 
         do {
             try context.save()
-            print("User saved successfully!")
+            return newUser
         } catch {
             print("Failed to save user: \(error)")
-        }
-    }
-
-    // Fetch a user by email
-    func fetchUser(withEmail email: String, context: NSManagedObjectContext) -> User? {
-        let request: NSFetchRequest<User> = User.fetchRequest() as! NSFetchRequest<User>
-        request.predicate = NSPredicate(format: "email == %@", email)
-
-        do {
-            let results = try context.fetch(request)
-            return results.first
-        } catch {
-            print("Failed to fetch user: \(error)")
             return nil
         }
     }
+
+
+
+
+    // Fetch a user by email
+    func fetchUser(withEmail email: String) -> User? {
+            let request: NSFetchRequest<User> = User.fetchRequest() as! NSFetchRequest<User>
+            request.predicate = NSPredicate(format: "email == %@", email)
+            do {
+                let results = try context.fetch(request)
+                return results.first
+            } catch {
+                print("Failed to fetch user: \(error)")
+                return nil
+            }
+        }
+
 
 
     // Update user details

@@ -14,6 +14,8 @@
 		1D69862E2BDDC79200DE0332 /* orgService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69862D2BDDC79200DE0332 /* orgService.swift */; };
 		1D85A5C62BDDCE6A00C860EA /* oppo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85A5C52BDDCE6A00C860EA /* oppo.swift */; };
 		1D85A5C82BDDCE7800C860EA /* oppoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85A5C72BDDCE7800C860EA /* oppoService.swift */; };
+		1D85A5D52BDDD6B900C860EA /* userServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85A5D42BDDD6B900C860EA /* userServiceTest.m */; };
+		1D85A5DC2BDDD6EC00C860EA /* userServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85A5DB2BDDD6EC00C860EA /* userServiceTest.swift */; };
 		1DAB18922BDDA2390001F544 /* pepe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB18912BDDA2390001F544 /* pepe.swift */; };
 		4A62B6562BDD90B30069DCD7 /* hackdavisprojApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */; };
 		4A62B6582BDD90B30069DCD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62B6572BDD90B30069DCD7 /* ContentView.swift */; };
@@ -25,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1D85A5D62BDDD6B900C860EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A62B64A2BDD90B30069DCD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A62B6512BDD90B30069DCD7;
+			remoteInfo = hackdavisproj;
+		};
 		4A62B6632BDD90B50069DCD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4A62B64A2BDD90B30069DCD7 /* Project object */;
@@ -49,6 +58,9 @@
 		1D69862D2BDDC79200DE0332 /* orgService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orgService.swift; sourceTree = "<group>"; };
 		1D85A5C52BDDCE6A00C860EA /* oppo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oppo.swift; sourceTree = "<group>"; };
 		1D85A5C72BDDCE7800C860EA /* oppoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oppoService.swift; sourceTree = "<group>"; };
+		1D85A5D22BDDD6B900C860EA /* userServiceTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = userServiceTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D85A5D42BDDD6B900C860EA /* userServiceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = userServiceTest.m; sourceTree = "<group>"; };
+		1D85A5DB2BDDD6EC00C860EA /* userServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userServiceTest.swift; sourceTree = "<group>"; };
 		1DAB18912BDDA2390001F544 /* pepe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pepe.swift; sourceTree = "<group>"; };
 		4A62B6522BDD90B30069DCD7 /* hackdavisproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackdavisproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A62B6552BDD90B30069DCD7 /* hackdavisprojApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackdavisprojApp.swift; sourceTree = "<group>"; };
@@ -63,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D85A5CF2BDDD6B900C860EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A62B64F2BDD90B30069DCD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,12 +120,22 @@
 			path = backend;
 			sourceTree = "<group>";
 		};
+		1D85A5D32BDDD6B900C860EA /* userServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				1D85A5D42BDDD6B900C860EA /* userServiceTest.m */,
+				1D85A5DB2BDDD6EC00C860EA /* userServiceTest.swift */,
+			);
+			path = userServiceTest;
+			sourceTree = "<group>";
+		};
 		4A62B6492BDD90B30069DCD7 = {
 			isa = PBXGroup;
 			children = (
 				4A62B6542BDD90B30069DCD7 /* hackdavisproj */,
 				4A62B6652BDD90B50069DCD7 /* hackdavisprojTests */,
 				4A62B66F2BDD90B50069DCD7 /* hackdavisprojUITests */,
+				1D85A5D32BDDD6B900C860EA /* userServiceTest */,
 				4A62B6532BDD90B30069DCD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +146,7 @@
 				4A62B6522BDD90B30069DCD7 /* hackdavisproj.app */,
 				4A62B6622BDD90B50069DCD7 /* hackdavisprojTests.xctest */,
 				4A62B66C2BDD90B50069DCD7 /* hackdavisprojUITests.xctest */,
+				1D85A5D22BDDD6B900C860EA /* userServiceTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +192,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1D85A5D12BDDD6B900C860EA /* userServiceTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D85A5D82BDDD6B900C860EA /* Build configuration list for PBXNativeTarget "userServiceTest" */;
+			buildPhases = (
+				1D85A5CE2BDDD6B900C860EA /* Sources */,
+				1D85A5CF2BDDD6B900C860EA /* Frameworks */,
+				1D85A5D02BDDD6B900C860EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D85A5D72BDDD6B900C860EA /* PBXTargetDependency */,
+			);
+			name = userServiceTest;
+			productName = userServiceTest;
+			productReference = 1D85A5D22BDDD6B900C860EA /* userServiceTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4A62B6512BDD90B30069DCD7 /* hackdavisproj */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A62B6762BDD90B50069DCD7 /* Build configuration list for PBXNativeTarget "hackdavisproj" */;
@@ -225,11 +273,17 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					1D85A5D12BDDD6B900C860EA = {
+						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
+						TestTargetID = 4A62B6512BDD90B30069DCD7;
+					};
 					4A62B6512BDD90B30069DCD7 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 					4A62B6612BDD90B50069DCD7 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = 4A62B6512BDD90B30069DCD7;
 					};
 					4A62B66B2BDD90B50069DCD7 = {
@@ -254,11 +308,19 @@
 				4A62B6512BDD90B30069DCD7 /* hackdavisproj */,
 				4A62B6612BDD90B50069DCD7 /* hackdavisprojTests */,
 				4A62B66B2BDD90B50069DCD7 /* hackdavisprojUITests */,
+				1D85A5D12BDDD6B900C860EA /* userServiceTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D85A5D02BDDD6B900C860EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A62B6502BDD90B30069DCD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +347,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D85A5CE2BDDD6B900C860EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D85A5DC2BDDD6EC00C860EA /* userServiceTest.swift in Sources */,
+				1D85A5D52BDDD6B900C860EA /* userServiceTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A62B64E2BDD90B30069DCD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +393,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1D85A5D72BDDD6B900C860EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A62B6512BDD90B30069DCD7 /* hackdavisproj */;
+			targetProxy = 1D85A5D62BDDD6B900C860EA /* PBXContainerItemProxy */;
+		};
 		4A62B6642BDD90B50069DCD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4A62B6512BDD90B30069DCD7 /* hackdavisproj */;
@@ -335,6 +411,45 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1D85A5D92BDDD6B900C860EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vhub.userServiceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackdavisproj.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hackdavisproj";
+			};
+			name = Debug;
+		};
+		1D85A5DA2BDDD6B900C860EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vhub.userServiceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackdavisproj.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hackdavisproj";
+			};
+			name = Release;
+		};
 		4A62B6742BDD90B50069DCD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -517,6 +632,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2ZG2FGZ45L;
@@ -526,6 +642,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JE.hackdavisprojTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "hackdavisproj/backend/hackdavisprojTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackdavisproj.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hackdavisproj";
@@ -537,6 +655,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2ZG2FGZ45L;
@@ -546,6 +665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JE.hackdavisprojTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "hackdavisproj/backend/hackdavisprojTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackdavisproj.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hackdavisproj";
@@ -591,6 +711,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D85A5D82BDDD6B900C860EA /* Build configuration list for PBXNativeTarget "userServiceTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D85A5D92BDDD6B900C860EA /* Debug */,
+				1D85A5DA2BDDD6B900C860EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4A62B64D2BDD90B30069DCD7 /* Build configuration list for PBXProject "hackdavisproj" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

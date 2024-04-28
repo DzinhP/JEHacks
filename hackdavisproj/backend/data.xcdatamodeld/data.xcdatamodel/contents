@@ -5,19 +5,16 @@
         <attribute name="descript" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="requirements" optional="YES" attributeType="String"/>
-        <attribute name="titile" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Org" representedClassName="Org" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="org">
         <attribute name="contactInfo" optional="YES" attributeType="String"/>
         <attribute name="descript" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="User" representedClassName="user" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="user">
-        <attribute name="availibility" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="skills" optional="YES" attributeType="Transformable"/>

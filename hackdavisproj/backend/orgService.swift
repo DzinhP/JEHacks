@@ -23,7 +23,7 @@ class OrgService {
         newOrganization.name = name
         newOrganization.location = location
         newOrganization.contactInfo = contactInfo
-        newOrganization.descriptionText = descriptionText
+        newOrganization.descript = descriptionText
         do {
             try context.save()
             print("Organization saved successfully!")
@@ -55,7 +55,7 @@ class OrgService {
                 organization.contactInfo = newContactInfo
             }
             if let newDescriptionText = newDescriptionText {
-                organization.descriptionText = newDescriptionText
+                organization.descript = newDescriptionText
             }
 
 

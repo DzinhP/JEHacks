@@ -20,9 +20,9 @@ class OppoService {
 
     // Create a new opportunity
     func createOpportunity(title: String, descriptionText: String, requirements: [String], date: Date, location: String) {
-        let newOppo = Oppo(context: context)
+        let newOppo = Oppor(context: context)
         newOppo.title = title
-        newOppo.descriptionText = descriptionText
+        newOppo.descript = descriptionText
         newOppo.requirements = requirements
         newOppo.date = date
         newOppo.location = location
@@ -38,8 +38,8 @@ class OppoService {
 
 
     // Fetch an opportunity by title
-    func fetchOpportunity(withTitle title: String) -> Oppo? {
-        let request: NSFetchRequest<Oppo> = Oppo.fetchRequest() as! NSFetchRequest<Oppo>
+    func fetchOpportunity(withTitle title: String) -> Oppor? {
+        let request: NSFetchRequest<Oppor> = Oppor.fetchRequest() as! NSFetchRequest<Oppor>
         request.predicate = NSPredicate(format: "title == %@", title)
         
         do {
@@ -53,12 +53,12 @@ class OppoService {
 
 
     // Update an opportunity
-    func updateOpportunity(opportunity: Oppo, newTitle: String?, newDescriptionText: String?, newRequirements: [String]?, newDate: Date?, newLocation: String?) {
+    func updateOpportunity(opportunity: Oppor, newTitle: String?, newDescriptionText: String?, newRequirements: [String]?, newDate: Date?, newLocation: String?) {
         if let newTitle = newTitle {
             opportunity.title = newTitle
         }
         if let newDescriptionText = newDescriptionText {
-            opportunity.descriptionText = newDescriptionText
+            opportunity.descript = newDescriptionText
         }
         if let newRequirements = newRequirements {
             opportunity.requirements = newRequirements
@@ -81,7 +81,7 @@ class OppoService {
 
 
     // Delete an opportunity
-    func deleteOpportunity(opportunity: Oppo) {
+    func deleteOpportunity(opportunity: Oppor) {
         context.delete(opportunity)
 
 
